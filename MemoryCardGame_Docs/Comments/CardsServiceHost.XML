@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CardsServiceHost</name>
+    </assembly>
+    <members>
+        <member name="T:CardsServiceHost.Program">
+            <summary>
+            The main program for running the service.
+            </summary>
+        </member>
+        <member name="M:CardsServiceHost.Program.Main(System.String[])">
+            <summary>
+            The Main
+            </summary>
+            <param name="args">Args from cmd.</param>
+        </member>
+    </members>
+</doc>

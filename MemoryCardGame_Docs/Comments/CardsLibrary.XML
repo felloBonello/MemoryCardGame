@@ -1,0 +1,398 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CardsLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:CardsLibrary.Card">
+            <summary>
+            This Class Represents a standard playing card.
+            </summary>
+        </member>
+        <member name="T:CardsLibrary.Card.SuitID">
+            <summary>
+            An enum that holds the suits type as well as its colour.
+            </summary>
+        </member>
+        <member name="T:CardsLibrary.Card.RankID">
+            <summary>
+            An enum that holds the suits numerical value.
+            </summary>
+        </member>
+        <member name="P:CardsLibrary.Card.Suit">
+            <summary>
+            Suit Property
+            </summary>
+            <value>
+            Grabs the SuitID enum.
+            </value>
+            <seealso cref="T:CardsLibrary.Card.SuitID"/>
+        </member>
+        <member name="P:CardsLibrary.Card.Rank">
+            <summary>
+            Rank Property
+            </summary>
+            <value>
+            Grabs the RankID enum.
+            </value>
+            <seealso cref="T:CardsLibrary.Card.RankID"/>
+        </member>
+        <member name="P:CardsLibrary.Card.Name">
+            <summary>
+            Name Property
+            </summary>
+            <returns>
+            Returns the suit and rank of the card to create the name.
+            </returns>
+        </member>
+        <member name="P:CardsLibrary.Card.ImageName">
+            <summary>
+            ImageName Property
+            </summary>
+            <returns>
+            Returns the suit and rank of the card to get the correct picture, based on the pictures file name.
+            </returns>
+        </member>
+        <member name="P:CardsLibrary.Card.isMatched">
+            <summary>
+            isMatched Property
+            </summary>
+            <value>
+            Boolean value to check if there is a match.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.Card.isFlipped">
+            <summary>
+            isFlipped Property
+            </summary>
+            <value>
+            Boolean value to check if the card is flipped.
+            </value>
+        </member>
+        <member name="M:CardsLibrary.Card.#ctor(CardsLibrary.Card.SuitID,CardsLibrary.Card.RankID)">
+            <summary>
+            Card two arg constructor.
+            </summary>
+            <param name="s">Takes in a suit enum</param>
+            <param name="r">Takes in a rank enum</param>
+        </member>
+        <member name="T:CardsLibrary.IClientCallback">
+            <summary>
+            This is an interface for the callback from the client.
+            </summary>
+        </member>
+        <member name="M:CardsLibrary.IClientCallback.UpdateUI(System.Int32)">
+            <summary>
+            Holds the update for the UI
+            </summary>
+            <param name="id">Takes in a player ID</param>
+        </member>
+        <member name="T:CardsLibrary.IGameState">
+            <summary>
+            This is to ensure that the contracts are enabled properly.
+            </summary>
+        </member>
+        <member name="P:CardsLibrary.IGameState.Players">
+            <summary>
+            Players Property
+            </summary>
+            <value>
+            Holds the players.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.IGameState.CardDeck">
+            <summary>
+            CardDeck Property
+            </summary>
+            <value>
+            Holds the deck.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.IGameState.Message">
+            <summary>
+            Message Property
+            </summary>
+            <value>
+            Keeps the messages.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.IGameState.MoveCount">
+            <summary>
+            CardsFlippedThisTurn Property
+            </summary>
+            <value>
+            Keeps tracks of cards flipped this turn.
+            </value>
+        </member>
+        <member name="M:CardsLibrary.IGameState.RegisterPlayer(System.String)">
+            <summary>
+            Registers a player for the game.
+            </summary>
+            <param name="playerName">Takes in the player name.</param>
+            <returns>Returns the current index of the player.</returns>
+            <seealso cref="M:CardsLibrary.IGameState.NotifyClients"/>
+        </member>
+        <member name="M:CardsLibrary.IGameState.FlipCard(System.String)">
+            <summary>
+            Flips a card.
+            </summary>
+            <param name="key">Takes in a key to check what card it is.</param>
+            <seealso cref="M:CardsLibrary.IGameState.IsGameOver"/>
+            <seealso cref="M:CardsLibrary.IGameState.NotifyClients"/>
+        </member>
+        <member name="M:CardsLibrary.IGameState.LeaveGame(System.Int32)">
+            <summary>
+            When the game is over this ensures that the players are properly unloaded
+            </summary>
+            <param name="playerID">Takes in the player ID</param>
+            <seealso cref="M:CardsLibrary.IGameState.NotifyClients"/>
+            <seealso cref="M:CardsLibrary.IGameState.QueueNextTurn"/>
+        </member>
+        <member name="M:CardsLibrary.IGameState.QueueNextTurn">
+            <summary>
+            This is to queue up the next player to prepare them for their turn.
+            </summary>
+        </member>
+        <member name="M:CardsLibrary.IGameState.NotifyClients">
+            <summary>
+            Notifys the clients as to what point the program is at.
+            </summary>
+        </member>
+        <member name="M:CardsLibrary.IGameState.IsGameOver">
+            <summary>
+            Check if the game is over.
+            </summary>
+            <returns>If the game is over, the boolean returns true else false.</returns>
+        </member>
+        <member name="T:CardsLibrary.GameState">
+            <summary>
+            Holds all the information of the current state of the game.
+            </summary>
+        </member>
+        <member name="P:CardsLibrary.GameState.Players">
+            <summary>
+            Players Property
+            </summary>
+            <value>
+            Holds the players.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.GameState.CardDeck">
+            <summary>
+            CardDeck Property
+            </summary>
+            <value>
+            Holds the deck.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.GameState.Message">
+            <summary>
+            Message Property
+            </summary>
+            <value>
+            Keeps the messages.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.GameState.MoveCount">
+            <summary>
+            MoveCount Property
+            </summary>
+            <value>
+            Moves the count of the game play.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.GameState.CardsFlippedThisTurn">
+            <summary>
+            CardsFlippedThisTurn Property
+            </summary>
+            <value>
+            Keeps tracks of cards flipped this turn.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.GameState.CurrentPlayerIndex">
+            <summary>
+            CurrentPlayerIndex Property
+            </summary>
+            <value>
+            The current players index.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.GameState.MatchCount">
+            <summary>
+            MatchCount Property
+            </summary>
+            <value>
+            How many matches have been played.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.GameState.PlayerLeft">
+            <summary>
+            PlayerLeft Property
+            </summary>
+            <value>
+            For if a player leaves.
+            </value>
+        </member>
+        <member name="M:CardsLibrary.GameState.#ctor">
+            <summary>
+            This is the default constructor
+            </summary>
+        </member>
+        <member name="M:CardsLibrary.GameState.GetWinner">
+            <summary>
+            This method determines the winner between the players.
+            </summary>
+            <seealso cref="M:CardsLibrary.GameState.NotifyClients"/>
+        </member>
+        <member name="M:CardsLibrary.GameState.IsGameOver">
+            <summary>
+            Check if the game is over.
+            </summary>
+            <returns>If the game is over, the boolean returns true else false.</returns>
+        </member>
+        <member name="M:CardsLibrary.GameState.RegisterPlayer(System.String)">
+            <summary>
+            Registers a player for the game.
+            </summary>
+            <param name="playerName">Takes in the player name.</param>
+            <returns>Returns the current index of the player.</returns>
+            <seealso cref="M:CardsLibrary.GameState.NotifyClients"/>
+        </member>
+        <member name="M:CardsLibrary.GameState.LeaveGame(System.Int32)">
+            <summary>
+            When the game is over this ensures that the players are properly unloaded
+            </summary>
+            <param name="playerID">Takes in the player ID</param>
+            <seealso cref="M:CardsLibrary.GameState.NotifyClients"/>
+            <seealso cref="M:CardsLibrary.GameState.QueueNextTurn"/>
+        </member>
+        <member name="M:CardsLibrary.GameState.FlipCard(System.String)">
+            <summary>
+            Flips a card.
+            </summary>
+            <param name="key">Takes in a key to check what card it is.</param>
+            <seealso cref="M:CardsLibrary.GameState.IsGameOver"/>
+            <seealso cref="M:CardsLibrary.GameState.GetWinner"/>
+            <seealso cref="M:CardsLibrary.GameState.NotifyClients"/>
+        </member>
+        <member name="M:CardsLibrary.GameState.NotifyClients">
+            <summary>
+            Notifys the clients as to what point the program is at.
+            </summary>
+        </member>
+        <member name="M:CardsLibrary.GameState.ResetCardsFlippedThisTurn">
+            <summary>
+            Flips the cards back if they are not a match, if they are removes them.
+            </summary>
+            <returns>Returns a boolean to check whether or not the two flipped cards are a match</returns>
+        </member>
+        <member name="M:CardsLibrary.GameState.QueueNextTurn">
+            <summary>
+            This is to queue up the next player to prepare them for their turn.
+            </summary>
+        </member>
+        <member name="T:CardsLibrary.Player">
+            <summary>
+            Contians attributes about the player objects.
+            </summary>
+        </member>
+        <member name="P:CardsLibrary.Player.HasTurn">
+            <summary>
+            HasTurn Property
+            </summary>
+            <value>
+            See's if the player has a turn.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.Player.Score">
+            <summary>
+            Score Property
+            </summary>
+            <value>
+            Holds the score.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.Player.Name">
+            <summary>
+            Name Property
+            </summary>
+            <value>
+            Holds the players name.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.Player.PlayerIndex">
+            <summary>
+            PlayerIndex Property
+            </summary>
+            <value>
+            Holds the players index.
+            </value>
+        </member>
+        <member name="P:CardsLibrary.Player.Callback">
+            <summary>
+            Callback Property
+            </summary>
+            <value>
+            Contians the callback from the client.
+            </value>
+        </member>
+        <member name="M:CardsLibrary.Player.#ctor(System.String)">
+            <summary>
+            Sets the attributes of the player.
+            </summary>
+            <param name="name">Takes in the players name.</param>
+        </member>
+        <member name="M:CardsLibrary.Player.Reset">
+            <summary>
+            Resets the hasTurn variable
+            </summary>
+        </member>
+        <member name="T:CardsLibrary.Deck">
+            <summary>
+            Defines the Deck that manages a collection of Card objects.
+            </summary>
+        </member>
+        <member name="P:CardsLibrary.Deck.cards">
+            <summary>
+            A Dictionary of the cards with key value pairs.
+            </summary>
+        </member>
+        <member name="M:CardsLibrary.Deck.#ctor">
+            <summary>
+            Deck default constructor
+            </summary>
+            <seealso cref="M:CardsLibrary.Deck.Shuffle"/>
+        </member>
+        <member name="P:CardsLibrary.Deck.NumCards">
+            <summary>
+            NumCards Property
+            </summary>
+            <returns>
+            Returns the card count.
+            </returns>
+        </member>
+        <member name="M:CardsLibrary.Deck.Shuffle">
+            <summary>
+            Shuffles the Cards.
+            </summary>
+            <seealso cref="M:CardsLibrary.Deck.populateKeyList"/>
+            <seealso cref="M:CardsLibrary.Deck.shuffleKeys"/>
+            <seealso cref="M:CardsLibrary.Deck.repopulate"/>
+        </member>
+        <member name="M:CardsLibrary.Deck.populateKeyList">
+            <summary>
+            Creates keys for the cards.
+            </summary>
+        </member>
+        <member name="M:CardsLibrary.Deck.shuffleKeys">
+            <summary>
+            Suffles the keys.
+            </summary>
+        </member>
+        <member name="M:CardsLibrary.Deck.repopulate">
+            <summary>
+            Populates a dicionary of card objects with shuffled key value pairs.
+            </summary>
+        </member>
+    </members>
+</doc>

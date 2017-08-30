@@ -1,0 +1,150 @@
+﻿<Window x:Class="MemoryCardGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemoryCardGame"
+        mc:Ignorable="d"
+        Icon="img/icon.png"
+        x:Name="mainWindow"
+        Title="The Game of Memory" Height="800" Width="1000" Closing="Window_Closing">
+    <Window.Resources>
+        <ResourceDictionary Source="Dictionary1.xaml"/>
+    </Window.Resources>
+    
+    <Grid x:Name="container">
+        <Grid.Background>
+            <ImageBrush ImageSource="img/background.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="gameOver" Content="Game Over" Visibility="Hidden" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="9" Grid.RowSpan="2" HorizontalAlignment="Center" Foreground="White" FontSize="60" />
+
+        <Image x:Name="A1" Source="img/back.png" Grid.Row="0" Grid.Column="0" MouseUp="CardClicked"/>
+        <Image x:Name="B1" Source="img/back.png" Grid.Row="0" Grid.Column="1" MouseUp="CardClicked"/>
+        <Image x:Name="C1" Source="img/back.png" Grid.Row="0" Grid.Column="2" MouseUp="CardClicked"/>
+        <Image x:Name="D1" Source="img/back.png" Grid.Row="0" Grid.Column="3" MouseUp="CardClicked"/>
+        <Image x:Name="E1" Source="img/back.png" Grid.Row="0" Grid.Column="4" MouseUp="CardClicked"/>
+        <Image x:Name="F1" Source="img/back.png" Grid.Row="0" Grid.Column="5" MouseUp="CardClicked"/>
+        <Image x:Name="G1" Source="img/back.png" Grid.Row="0" Grid.Column="6" MouseUp="CardClicked"/>
+        <Image x:Name="H1" Source="img/back.png" Grid.Row="0" Grid.Column="7" MouseUp="CardClicked"/>
+        <Image x:Name="I1" Source="img/back.png" Grid.Row="0" Grid.Column="8" MouseUp="CardClicked"/>
+
+        <Image x:Name="A2" Source="img/back.png" Grid.Row="1" Grid.Column="0" MouseUp="CardClicked"/>
+        <Image x:Name="B2" Source="img/back.png" Grid.Row="1" Grid.Column="1" MouseUp="CardClicked"/>
+        <Image x:Name="C2" Source="img/back.png" Grid.Row="1" Grid.Column="2" MouseUp="CardClicked"/>
+        <Image x:Name="D2" Source="img/back.png" Grid.Row="1" Grid.Column="3" MouseUp="CardClicked"/>
+        <Image x:Name="E2" Source="img/back.png" Grid.Row="1" Grid.Column="4" MouseUp="CardClicked"/>
+        <Image x:Name="F2" Source="img/back.png" Grid.Row="1" Grid.Column="5" MouseUp="CardClicked"/>
+        <Image x:Name="G2" Source="img/back.png" Grid.Row="1" Grid.Column="6" MouseUp="CardClicked"/>
+        <Image x:Name="H2" Source="img/back.png" Grid.Row="1" Grid.Column="7" MouseUp="CardClicked"/>
+        <Image x:Name="I2" Source="img/back.png" Grid.Row="1" Grid.Column="8" MouseUp="CardClicked"/>
+
+        <Image x:Name="A3" Source="img/back.png" Grid.Row="2" Grid.Column="0" MouseUp="CardClicked"/>
+        <Image x:Name="B3" Source="img/back.png" Grid.Row="2" Grid.Column="1" MouseUp="CardClicked"/>
+        <Image x:Name="C3" Source="img/back.png" Grid.Row="2" Grid.Column="2" MouseUp="CardClicked"/>
+        <Image x:Name="D3" Source="img/back.png" Grid.Row="2" Grid.Column="3" MouseUp="CardClicked"/>
+        <Image x:Name="E3" Source="img/back.png" Grid.Row="2" Grid.Column="4" MouseUp="CardClicked"/>
+        <Image x:Name="F3" Source="img/back.png" Grid.Row="2" Grid.Column="5" MouseUp="CardClicked"/>
+        <Image x:Name="G3" Source="img/back.png" Grid.Row="2" Grid.Column="6" MouseUp="CardClicked"/>
+        <Image x:Name="H3" Source="img/back.png" Grid.Row="2" Grid.Column="7" MouseUp="CardClicked"/>
+        <Image x:Name="I3" Source="img/back.png" Grid.Row="2" Grid.Column="8" MouseUp="CardClicked"/>
+
+        <Image x:Name="A4" Source="img/back.png" Grid.Row="3" Grid.Column="0" MouseUp="CardClicked"/>
+        <Image x:Name="B4" Source="img/back.png" Grid.Row="3" Grid.Column="1" MouseUp="CardClicked"/>
+        <Image x:Name="C4" Source="img/back.png" Grid.Row="3" Grid.Column="2" MouseUp="CardClicked"/>
+        <Image x:Name="D4" Source="img/back.png" Grid.Row="3" Grid.Column="3" MouseUp="CardClicked"/>
+        <Image x:Name="E4" Source="img/back.png" Grid.Row="3" Grid.Column="4" MouseUp="CardClicked"/>
+        <Image x:Name="F4" Source="img/back.png" Grid.Row="3" Grid.Column="5" MouseUp="CardClicked"/>
+        <Image x:Name="G4" Source="img/back.png" Grid.Row="3" Grid.Column="6" MouseUp="CardClicked"/>
+        <Image x:Name="H4" Source="img/back.png" Grid.Row="3" Grid.Column="7" MouseUp="CardClicked"/>
+        <Image x:Name="I4" Source="img/back.png" Grid.Row="3" Grid.Column="8" MouseUp="CardClicked"/>
+
+        <Image x:Name="A5" Source="img/back.png" Grid.Row="4" Grid.Column="0" MouseUp="CardClicked"/>
+        <Image x:Name="B5" Source="img/back.png" Grid.Row="4" Grid.Column="1" MouseUp="CardClicked"/>
+        <Image x:Name="C5" Source="img/back.png" Grid.Row="4" Grid.Column="2" MouseUp="CardClicked"/>
+        <Image x:Name="D5" Source="img/back.png" Grid.Row="4" Grid.Column="3" MouseUp="CardClicked"/>
+        <Image x:Name="E5" Source="img/back.png" Grid.Row="4" Grid.Column="4" MouseUp="CardClicked"/>
+        <Image x:Name="F5" Source="img/back.png" Grid.Row="4" Grid.Column="5" MouseUp="CardClicked"/>
+        <Image x:Name="G5" Source="img/back.png" Grid.Row="4" Grid.Column="6" MouseUp="CardClicked"/>
+        <Image x:Name="H5" Source="img/back.png" Grid.Row="4" Grid.Column="7" MouseUp="CardClicked"/>
+        <Image x:Name="I5" Source="img/back.png" Grid.Row="4" Grid.Column="8" MouseUp="CardClicked"/>
+
+        <Image x:Name="A6" Source="img/back.png" Grid.Row="5" Grid.Column="0" MouseUp="CardClicked"/>
+        <Image x:Name="B6" Source="img/back.png" Grid.Row="5" Grid.Column="1" MouseUp="CardClicked"/>
+        <Image x:Name="C6" Source="img/back.png" Grid.Row="5" Grid.Column="2" MouseUp="CardClicked"/>
+        <Image x:Name="D6" Source="img/back.png" Grid.Row="5" Grid.Column="3" MouseUp="CardClicked"/>
+        <Image x:Name="E6" Source="img/back.png" Grid.Row="5" Grid.Column="4" MouseUp="CardClicked"/>
+        <Image x:Name="F6" Source="img/back.png" Grid.Row="5" Grid.Column="5" MouseUp="CardClicked"/>
+        <Image x:Name="G6" Source="img/back.png" Grid.Row="5" Grid.Column="6" MouseUp="CardClicked"/>
+        <Image x:Name="H6" Source="img/back.png" Grid.Row="5" Grid.Column="7" MouseUp="CardClicked"/>
+        <Image x:Name="I6" Source="img/back.png" Grid.Row="5" Grid.Column="8" MouseUp="CardClicked"/>
+
+        <Button Content="Continue" IsEnabled="false" x:Name="endTurn" Grid.Row="6" Grid.Column="8" IsDefault="True" Click="continue_Click"/>
+        <Label Content="{Binding msg}" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="4" HorizontalAlignment="Center" Style="{DynamicResource playerMsg}"/>
+
+        <Grid x:Name="player1" Visibility="Hidden" Grid.Row="6" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Player 1" />
+            <Label x:Name="p1Score" Grid.Row="1" />
+            <Label Content="Your Turn" Visibility="Hidden" Grid.Row="2" />
+        </Grid>
+
+        <Grid x:Name="player2" Visibility="Hidden" Grid.Row="6" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Player 2" />
+            <Label x:Name="p2Score" Grid.Row="1" />
+            <Label Content="Your Turn" Visibility="Hidden" Grid.Row="2" />
+        </Grid>
+
+        <Grid x:Name="player3" Visibility="Hidden" Grid.Row="6" Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Player 3" />
+            <Label x:Name="p3Score" Grid.Row="1" />
+            <Label Content="Your Turn" Visibility="Hidden" Grid.Row="2" />
+        </Grid>
+
+        <Grid x:Name="player4" Visibility="Hidden" Grid.Row="6" Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Player 4" />
+            <Label x:Name="p4Score" Grid.Row="1" />
+            <Label Content="Your Turn" Visibility="Hidden" Grid.Row="2" />
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="CardsLibrary.Card">
+    <Position X="0.5" Y="0.5" Width="2.5" />
+    <NestedTypes>
+      <Enum Name="CardsLibrary.Card.SuitID" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Card.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="CardsLibrary.Card.RankID" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Card.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAABAABAAAAAQAABAAAAAAQAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CardsLibrary.Deck">
+    <Position X="3.25" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAQoAAAAAAgAAAAAAAAABAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Deck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CardsLibrary.GameState" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>QCAAAoAAAIAAAIAAAAEAAAAAQABgAAAgAAAQICCAAAA=</HashCode>
+      <FileName>GameState.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.137" Collapsed="true" />
+  </Class>
+  <Class Name="CardsLibrary.Player">
+    <Position X="10" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAhAAAAAAAQAAAAAAAEAAAAAAAAQQAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="CardsLibrary.IClientCallback">
+    <Position X="0.75" Y="3.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CardsLibrary.IGameState">
+    <Position X="3.5" Y="3.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAgAAAAAAAAAAAAEAAAAAQAAgAAAgAAAQICCAAAA=</HashCode>
+      <FileName>GameState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

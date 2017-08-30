@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryCardGame", "MemoryCardGame\MemoryCardGame.csproj", "{5D20AF5F-AE37-47A4-B300-B8CEDD221E59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardsLibrary", "CardsLibrary\CardsLibrary.csproj", "{4295D08C-FBCE-4827-B074-29F963C25C8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CardsServiceHost", "CardsServiceHost\CardsServiceHost.csproj", "{AD46E6C3-2979-43E5-A622-7DFA821E7EEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D20AF5F-AE37-47A4-B300-B8CEDD221E59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D20AF5F-AE37-47A4-B300-B8CEDD221E59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D20AF5F-AE37-47A4-B300-B8CEDD221E59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D20AF5F-AE37-47A4-B300-B8CEDD221E59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4295D08C-FBCE-4827-B074-29F963C25C8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4295D08C-FBCE-4827-B074-29F963C25C8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4295D08C-FBCE-4827-B074-29F963C25C8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4295D08C-FBCE-4827-B074-29F963C25C8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD46E6C3-2979-43E5-A622-7DFA821E7EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD46E6C3-2979-43E5-A622-7DFA821E7EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD46E6C3-2979-43E5-A622-7DFA821E7EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD46E6C3-2979-43E5-A622-7DFA821E7EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

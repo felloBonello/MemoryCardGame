@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MemoryCardGame</name>
+    </assembly>
+    <members>
+        <member name="T:MemoryCardGame.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:MemoryCardGame.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:MemoryCardGame.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:MemoryCardGame.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="P:MemoryCardGame.MainWindow.msg">
+            <summary>
+            
+            </summary>
+            <value>
+            The popup message.
+            </value>
+        </member>
+        <member name="F:MemoryCardGame.MainWindow.msgProp">
+            <summary>
+            Message Property
+            </summary>
+            <value>
+            Holds the value for the message
+            </value>
+        </member>
+        <member name="M:MemoryCardGame.MainWindow.#ctor">
+            <summary>
+            The Main Window
+            </summary>
+        </member>
+        <member name="M:MemoryCardGame.MainWindow.UpdateUI(System.Int32)">
+            <summary>
+            This is used to update the UI to let the player know information about the Game.
+            </summary>
+            <param name="id">Takes in the players ID</param>
+        </member>
+        <member name="M:MemoryCardGame.MainWindow.Window_Closing(System.Object,System.ComponentModel.CancelEventArgs)">
+            <summary>
+            Called when the Game is closed.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryCardGame.MainWindow.continue_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Once their is a click move on and update everything.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MemoryCardGame.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MemoryCardGame.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MemoryCardGame.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MemoryCardGame.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>
